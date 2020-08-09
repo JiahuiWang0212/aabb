@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<!--页面是中文页面,英文页面为en-->
+<!--  <link rel="stylesheet" type="text/css" href="Login.css"/>  -->
+<head>
+	<meta charset="utf-8">
+	   
+<style type="text/css">
+	.bjt{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height:100%;
+		min-width: 1000px;
+		z-index: -10;
+		background-image: url(http://m.qpic.cn/psc?/V106IrpE3XVsOX/hXkBARcFUKDsGY2wtkAmmtEEn.a8A3AEYtF*NRViJkrwncCs*E2jhXWIlHi5jnxYtexa1fKeG8zGOUnfCpJZSw!!/b&bo=kAH5AJAB.QACCS0!&rf=viewer_4);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center 0;
+	}
+	
+	.header {
+		border-style: solid;
+		border-width: 2px;
+		background-color: rgba(0,139,139,0.5);
+		height: 250px;
+		width: 200px;
+    	color: black;
+    	position: relative;
+    	top: 225px;
+    	left: 200px;
+	}
+	.but{   
+ 		width: 200px;   
+ 		min-height: 20px;        
+ 		color: black;   
+	}
+
+	.login-btn{
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 30px auto;
+    background:#218694;
+    border: none;
+    outline: none;
+    color:#000080;
+    font-size: 16px;
+    cursor: pointer;
+}
+	
+</style>
+<!--rgba(255,255,255,0.3):透明度为0.3的白色-->
+</head>
+
+<body>
+	<div class="bjt">
+		<p>
+			<div class="header">
+				<h2 style="text-align: center;">登录</h2> 
+				
+				<form>
+					<p>账号: <input type="text" name="username" placeholder="电话号/邮箱" /></p><br>
+					  <p>密码: <input type="password" name="password" placeholder="请填写密码" /></p><br>
+					  <button class="login-btn">提交</button>
+				  <!--<input class="but" type="submit" value="提交"/>-->
+				</form>   
+  			</div>
+				
+		</p>
+	</div>
+	<script>
+		btn.onclick = function () {
+                   //创建ajax对象
+                    var xhr = new XMLHttpRequest();
+                    var accountValue = userAccount.value;
+                    var passwordValue = userPassword.value;
+                    var params = 'userAccount='+accountValue+'&userPassword='+passwordValue;
+                    //配置ajax对象
+                    xhr.open('post','http://localhost:3000/post');
+                    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+                    xhr.send(params);
+                    xhr.onload = function () {
+                       console.log(xhr.responseText);
+                    }
+                   xhr.onerror = function(){
+                       alert('网络中断，无法发送请求');
+                   }
+               }
+	</script>	 
+</body>
+
+</html>
