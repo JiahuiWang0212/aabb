@@ -1,0 +1,91 @@
+@charset "utf-8";
+/*统一设置*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*网页背景图片*/
+body{
+    background: url("http://b17.photo.store.qq.com/psb?/V106IrpE2MlzL7/xi.8Mg2OYO1zzzH5yr6O9XClPc3SqHYlcBPCWZ6.oB4!/b/dBEAAAAAAAAA&bo=0AIABQAAAAARB.c!&rf=viewer_4") no-repeat ;
+    background-size: cover;
+}
+/*登陆区主体*/
+#main{
+    top: 250px;
+    left: 360px;
+    width: 350px;
+    height: 275px;
+    background: rgba(248, 246, 246, 0.5);
+    border-top: 1px solid #36353a;
+    position: relative;
+   
+}
+.headd{
+    width: 75%;
+    height: 10px;
+    margin: 30px auto;
+    border: none;
+    outline: none;
+    color: rgb(8, 7, 7);
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*账号密码区*/
+#account{
+    width: 75%;
+    margin: 0 auto;
+    
+}
+#account .input-box{
+    height: 50px;
+}
+#account .input-box input{
+    height: 40px;
+    width: calc(100% - 10px);
+    border: none;
+    outline: none;
+    padding: 0 5px;
+    background: rgba(0,0,0,0.5);
+    color: #faf6f8;
+    font-size: 16px;
+    text-decoration:none;
+}
+
+/*登录按钮*/
+.login-btn{
+    width: 75%;
+    height:40px;
+    display: block;
+    margin-left: 43px;
+    background:#0c0708 ;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*按下按钮*/
+.login-btn:active{
+    position: relative;
+    top:2px;
+}
+
+/*登陆区底部*/
+#footer{
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+#footer a{
+    color: rgb(7, 1, 1);
+    text-decoration: none;
+}
+#footer a:hover{
+    color: blue;
+}
